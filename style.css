@@ -13,8 +13,8 @@
     --fw-reg: 300;
     --fw-bold: 900;
     
-    --clr-light: #fff;
-    --clr-dark: #303030;
+    --clr-light: #000000;
+    --clr-dark: #ffffff;
     --clr-accent: #16e0bd;
     
     --fs-h1: 3rem;
@@ -25,6 +25,17 @@
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+.light-theme{
+    
+    background-color: #ffffff;
+   
+    --clr-light: #7e1313;
+    --clr-dark: #ffffff;
+    --clr-accent: #16e0bd;
+    
+  
+
 }
 
 
@@ -50,7 +61,7 @@ html {
 }
 
 body {
-    background: var(--clr-light);
+    background: #3a3434;
     color: var(--clr-dark);
     margin: 0;
     font-family: var(--ff-primary);
@@ -143,14 +154,142 @@ h3 { font-size: var(--fs-h3) }
 }
 
 
-
 /* header */
-
+/* 
 header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
+} */
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(53, 53, 53);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds depth */
 }
+
+header {
+    background-color: rgba(53, 53, 53, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+
+.header-actions{
+    display:flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight:300;
+}
+nav{
+    display:flex;
+    align-items: center;
+   
+    gap: 3rem;
+     margin-left: 6%;
+}
+    
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    
+
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Adjust spacing below text */
+    width: 0%;
+    height: 2px;
+    background-color: black; /* Or your accent color */
+    transition: width 0.3s ease-in-out;
+    color:#16e0bd
+}
+
+nav a:hover{
+    color:#16e0bd;
+}
+nav a:hover::after {
+    width: 100%;
+    
+}
+
+/* 
+#icon{
+    width: 30px;
+    cursor: pointer;
+
+} */
+
+section:first-of-type {
+    padding-top: 6rem; /* Adjust based on header height */
+}
+
+
+
+.container{
+    width:100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+
+
+}
+
+.btn-signing{
+    background-color: silver;
+    color: black;
+    
+    border-radius: 50px;
+    border: none;
+    font-size: 1 rem;
+    
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+
+}
+
+.btn-signing:hover{
+    background-color: white;
+
+}
+
+@media (max-width: 1020px){
+    header{
+        padding: 1rem 0.1rem;
+
+    }
+    nav{
+        display:none;
+    }
+    .btn-signing{
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+
 
 .logo {
     max-width: 100px;
@@ -312,7 +451,7 @@ header {
 	background-image: url(img/services-bg.jpg);
 	background-size: cover;
 	/*background-blend-mode: multiply;*/
-	color: var(--clr-light);
+	color: white;
 	text-align: center;
 }
 
@@ -358,6 +497,7 @@ header {
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
+    
 }
 
 .about-me__img {
@@ -366,7 +506,7 @@ header {
 
 @media (min-width: 600px) {
     .about-me {
-        display: grid;
+        display:grid;
         grid-template-columns: 1fr 200px;
         grid-template-areas: 
             "title img"
@@ -396,13 +536,13 @@ header {
         z-index: 2;
 	max-width: 290px; */
     }
-}
+
 
 /* My Work */
 
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: #35323291;
+    color: #ffffff;
     text-align: center; 
     /*max-width: 1800px;*/
     margin: 0 auto;  

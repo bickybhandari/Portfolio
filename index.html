@@ -14,27 +14,31 @@
 
     </head>
     <body>
-      <header>
-        <div class="logo">
-          <img src="img/devjane.png " alt="">
+
+        <div class = "container">
+            <header> 
+                <h1 class="logo">devbicky</h1>
+
+                <nav> 
+                    <a href="#">Home</a>
+                    <a href="#">MyServices</a>
+                    <a href="#">About Me</a>
+                    <a href="#">My Work</a>
+
+                </nav>
+                <div class="header-actions">
+                        
+                    <button class = "btn-signing"> RESUME </button>
+
+                    <img src="img/sun.svg" id="icon">
+                </div>
+
+             </header>
         </div>
 
-        <button class= "nav-toggle" area-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
+    
+        
 
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class ="nav__item"><a href="#home" class="nav__link">Home</a></li>
-            <li class ="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-            <li class ="nav__item"><a href="#about" class="nav__link">About me</a></li>
-            <li class ="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-          </ul>
-        </nav>
-      </header>
-
-
-      <!-- introduction -->
 
 
 
@@ -83,6 +87,7 @@
         <!-- About me -->
         <section class="about-me" id="about">
            <h2 class="section__title section__title--about">Who I am</h2>
+           
            <p class="section__subtitle section__subtitle--about">Designer and Developer | Data Enthusiast | Computer Science Student
            </p>
            
@@ -93,9 +98,14 @@
                <p>I thrive at the intersection of logic and creativity—whether I’m analyzing datasets for 
                 insights or crafting intuitive web experiences. Currently,
                  I’m expanding my skills in SQL and JavaScript to build more dynamic solutions.</p>
+                
            </div>
+
+    <img src="bicky.jpg" alt="a picture" class="intro__img">
+
            
-           <img src="img/dev-jane-02.jpg" alt="Jane leaning against a bus" class="about-me__img">
+
+    
         </section>
 
         <!-- my work-->
@@ -188,6 +198,19 @@
 
          <script src="js/index.js"></script>
         
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function() {
+            document.body.classList.toggle("light-theme");
+            if(document.body.classList.contains("light-theme")){
+                icon.src = "img/moon.svg";
+            }else{
+                icon.src = "img/sun.svg";
+            }
+        }
+        
+    </script>
 
     </body>
 </html>
