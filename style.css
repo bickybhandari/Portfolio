@@ -287,6 +287,9 @@ section:first-of-type {
     .btn-signing{
         padding: 0.6rem 1.5rem;
     }
+    #icon{
+        padding: 1rem 1rem;
+    }
 }
 
 
