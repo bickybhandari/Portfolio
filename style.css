@@ -52,6 +52,9 @@
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
+    nav{
+        font-size: 1rem;
+    }
 }
 
 /* General styles */
