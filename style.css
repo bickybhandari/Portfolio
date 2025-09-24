@@ -116,16 +116,21 @@ h1,
 h2,
 h3 {
     line-height: 1;
-    margin: 0;
+    margin: 6px;
 }
 
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
-
+.box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vh;
+}
 .section__title {
-    margin-bottom: .25em;
+    margin-bottom: 0em;
 }
 
 .section__title--intro {
@@ -559,17 +564,25 @@ section:first-of-type {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0rem;
 }
 
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    
+   
 }
 
 .portfolio__img {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .portfolio__item:focus {
@@ -582,6 +595,8 @@ section:first-of-type {
     transform: scale(1.2);
     opacity: .5;
 }
+
+
 
 
 /* footer */
